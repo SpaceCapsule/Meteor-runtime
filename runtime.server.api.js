@@ -33,7 +33,9 @@ Runtime.afterRigged = false;
 */
 Runtime.package = function(packageAssets, handler, where) {
   var self = this;
-  var whereArray = (_.isArray(where))?where:[where];
+
+  // Make sure where is an array and fallback to "after" if falsy
+  var whereArray = (_.isArray(where))?where:[where || 'after'];
 
   // Check that we have a function
   if (typeof handler !== 'function') {
@@ -121,8 +123,13 @@ console.log(api);
           // We have a non empty string as filename
           // Now extract the extension
           var ext = filename.split('.').pop().toLowerCase();
-          if (where === here && ext === format) {
-            // Add the file to the bundle
+
+          // If where is undefined then it should just be added
+          // this would be the common case if only loading after Meteor
+          if (ext === format && (where === here || typeof where === 'undefined')) {
+
+            // Add the file to the bundle or die trying, we expect both css and
+            // js assets to be of text
             try{
               result += package.assets.getText(filename);
             } catch(err) {
@@ -152,6 +159,15 @@ HTTP.methods({
     if (filename !== '') {
       var ext = filename.split('.').pop().toLowerCase();
       var name = filename.slice(0, filename.length - ext.length -1);
+
+      // Set the proper content-type for js and css
+      if (ext === 'js') {
+        this.setContentType('text/javascript');
+      }
+
+      if (ext === 'css') {
+        this.setContentType('text/css');
+      }
 
       return Runtime._runHandles(this, ext, name);
     }

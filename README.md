@@ -9,7 +9,7 @@ The runtime packages can be created from packages or from an app
 `Runtime.package` Parametres:
 * `Assets` - Requires the current Assets object - this is scoped pr. app and package so the bundler needs to be passed a handle. It's used to load `js` and `css` assets into a runtime bundle.
 * `packageHandler` - Requires a function to get the wanted runtime bundle.
-* `where` - Required, set the bundles where you want to allow use of the `packageHandler`
+* `where` - Optional, set the bundles where you want to allow use of the `packageHandler` - fallsback to "after" if not set.
 
 Example:
 ```js
@@ -25,7 +25,8 @@ Example:
 	  // api.device
 	  //
 	  // For adding file dependencies:
-	  // api.addFile(filename, where)
+	  // api.addFile(filename, [where])
+	  // where is optional, if not set then included in all package bundles
 	  // 'before', 'after', 'lazy' or 'customName' (two last would require manual loading / lazyloading)
 	  //console.log(api.query.tester);
 	  api.addFile('test.js', 'before');
