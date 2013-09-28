@@ -1,0 +1,13 @@
+{
+  "name": "runtime",
+  "description": "Adds runtime bundler to Meteor",
+  "homepage": "https://github.com/raix/Meteor-runtime",
+  "author": "Morten Henriksen  (http://gi-software.com)",
+  "version": "0.0.1",
+  "git": "https://github.com/raix/Meteor-runtime.git",
+  "packages": {
+    "http-methods": {
+      "git": "https://github.com/raix/Meteor-http-methods.git"
+    }
+  }
+}
