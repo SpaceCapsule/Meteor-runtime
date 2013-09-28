@@ -8,6 +8,9 @@
   "packages": {
     "http-methods": {
       "git": "https://github.com/raix/Meteor-http-methods.git"
+    },
+    "useragent": {
+      "git": "https://github.com/awwx/meteor-useragent.git"
     }
   }
 }
