@@ -16,7 +16,7 @@ Example:
 	// Add file from assets
 	Runtime.package(Assets, function(api) {
 	  // The api object:
-	  // api.query
+	  // api.query - The parent parametres can be passed on
 	  // api.userAgent
 	  //
 	  // If user added Andrew's useragent package then the following will be available:
