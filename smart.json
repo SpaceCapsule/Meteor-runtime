@@ -3,7 +3,7 @@
   "description": "Adds runtime bundler to Meteor",
   "homepage": "https://github.com/raix/Meteor-runtime",
   "author": "Morten Henriksen  (http://gi-software.com)",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "git": "https://github.com/raix/Meteor-runtime.git",
   "packages": {
     "http-methods": {
@@ -11,6 +11,9 @@
     },
     "useragent": {
       "git": "https://github.com/awwx/meteor-useragent.git"
+    },
+    "runtime-appcache": {
+      "git": "https://github.com/raix/Meteor-runtime-appcache.git"
     }
   }
 }

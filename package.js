@@ -1,6 +1,6 @@
 Package.describe({
     summary: 'Adds Runtime bundler\n'+
-         '\u001b[32mv0.0.2\n'+
+         '\u001b[32mv0.0.3\n'+
          '\u001b[33m-----------------------------------------\n'+
          '\u001b[0m Adds Runtime bundles                     \n'+
          '\u001b[0m                                          \n'+
@@ -15,8 +15,11 @@ Package.on_use(function(api) {
 
   api.imply && api.imply('http-methods');
 
-  // Use this package if its installed
+  // Use the useragent package if its installed
   api.use('useragent', { weak: true });
+
+  // Use the runtime appcache package if its installed
+  api.use('runtime-appcache', { weak: true });
 
   api.export && api.export('Runtime');
 
