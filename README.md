@@ -1,4 +1,4 @@
-Runtime [![Build Status](https://travis-ci.org/raix/Meteor-runtime.png?branch=master)](https://travis-ci.org/raix/Meteor-runtime)
+Runtime [![Build Status](https://travis-ci.org/raix/Meteor-runtime.png?branch=master)](https://travis-ci.org/raix/Meteor-runtime) [[!Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HGCMGYGSC3RSL)
 ============
 
 This package add runtime dynamic bundling to Meteor,
