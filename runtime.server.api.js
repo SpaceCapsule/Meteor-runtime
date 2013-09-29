@@ -81,6 +81,12 @@ Runtime.package = function(packageAssets, handler, where) {
     // Create array if not found
     if (typeof self.packages[value] === 'undefined') {
       self.packages[value] = [];
+
+      // If the appcache is installed and compatible with runtime we initialize
+      if (Meteor.AppCache && Meteor.AppCache.addRuntimeBundle) {
+        Meteor.AppCache.addRuntimeBundle('/runtime/' + value + '.js');
+        Meteor.AppCache.addRuntimeBundle('/runtime/' + value + '.css');
+      }
     }
 
     // Add runtime package handle to runtime handlers
