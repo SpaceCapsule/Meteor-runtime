@@ -97,7 +97,7 @@ Runtime.package = function(packageAssets, handler, where) {
 
 Runtime._runHandles = function(scope, format, here) {
   var self = this;
-  console.log('Run handlers for ' + format + ' when ' + here);
+  //console.log('Run handlers for ' + format + ' when ' + here);
   // Rig the package scope we start with a object either empty
   // or set by the useragent package
   var api = Runtime.parseUseragent(scope.userAgent);
@@ -113,7 +113,7 @@ Runtime._runHandles = function(scope, format, here) {
 
   // The return result string
   var result = '';
-console.log(api);
+// console.log(api);
   _.each(self.packages[here], function(package) {
 
     // Set the Asset specific addFile pr. package

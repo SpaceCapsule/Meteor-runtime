@@ -53,6 +53,7 @@ _Runtime.rigBeforeMeteorLoader = function() {
 
 		// Add the prebundle runtime code in the header tag
 		self.addRuntimeCode('// ##RUNTIME_CONFIG##', prebundleCode);
+    self.addRuntimeCode('\n##RUNTIME_CONFIG##', '<script type="text/javascript">' + prebundleCode + '</script>');
 	}
 };
 
