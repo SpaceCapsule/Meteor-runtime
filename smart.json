@@ -4,16 +4,16 @@
   "homepage": "https://github.com/raix/Meteor-runtime",
   "author": "Morten Henriksen  (http://gi-software.com)",
   "version": "0.0.4",
-  "git": "https://github.com/raix/Meteor-runtime.git",
+  "git": "https://github.com/SpaceCapsule/Meteor-runtime.git",
   "packages": {
     "http-methods": {
-      "git": "https://github.com/raix/Meteor-http-methods.git"
+      "git": "https://github.com/CollectionFS/Meteor-http-methods.git"
     },
     "useragent": {
       "git": "https://github.com/awwx/meteor-useragent.git"
     },
     "runtime-appcache": {
-      "git": "https://github.com/raix/Meteor-runtime-appcache.git"
+      "git": "https://github.com/SpaceCapsule/Meteor-runtime-appcache.git"
     }
   }
 }
