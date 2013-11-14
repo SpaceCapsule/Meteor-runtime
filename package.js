@@ -1,10 +1,5 @@
 Package.describe({
-    summary: 'Adds Runtime bundler\n'+
-         '\u001b[32mv0.0.5\n'+
-         '\u001b[33m-----------------------------------------\n'+
-         '\u001b[0m Adds Runtime bundles                     \n'+
-         '\u001b[0m                                          \n'+
-         '\u001b[33m-------------------------------------RaiX\n'
+    summary: 'Adds Runtime bundler'
 });
 
 Package.on_use(function(api) {
