@@ -1,3 +1,5 @@
+# DEPRECATED: No longer maintained
+
 Runtime [![Build Status](https://travis-ci.org/SpaceCapsule/Meteor-runtime.png?branch=master)](https://travis-ci.org/SpaceCapsule/Meteor-runtime)
 ============
 
